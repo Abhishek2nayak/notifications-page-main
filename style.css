@@ -1,0 +1,190 @@
+
+      :root {
+        --pcolor-red: hsl(1, 90%, 64%);
+        --pcolor-blue: hsl(219, 85%, 26%);
+        --ncolor-white: hsl(0, 0%, 100%);
+        --ncolor-vl-g-b: hsl(210, 60%, 98%);
+        --ncolor-l-g-b1: hsl(211, 68%, 94%);
+        --ncolor-l-g-b2: hsl(205, 33%, 90%);
+        --ncolor-g-v: hsl(219, 14%, 63%);
+        --ncolor-dg-b: hsl(219, 12%, 42%);
+        --ncolor-d-blue: hsl(224, 21%, 14%);
+        --f-s: 16px;
+        --f-weight-500: 500;
+        --f-weight-800: 800;
+      }
+
+      /* normalizing css property  */
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      /* remove default margin */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      li,
+      figure,
+      figcaption,
+      blockquote,
+      dl,
+      dd {
+        margin: 0;
+      }
+
+      html:focus-within {
+        scroll-behavior: smooth;
+      }
+      ul[role="list"],
+      ol[role="list"] {
+        list-style: none;
+      }
+      a:not([class]) {
+        text-decoration-skip-ink: auto;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: hsl(210, 60%, 98%);
+        min-width: 100vh;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+      .container {
+        padding: 25px 20px;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 20px;
+        border: 1px solid hsl(211, 68%, 94%);
+        box-shadow: 0 4px 4px 0 hsl(211, 68%, 94%);
+        width: 70%;
+        margin: 50px 30px;
+      }
+
+      .bold {
+        font-weight: 800;
+      }
+      .light {
+        font-weight: 500;
+      }
+      .light-color {
+        color: var(--ncolor-g-v);
+      }
+      .dark-color {
+        color: var(--ncolor-dg-b);
+      }
+      .vlight-color {
+        color: var(--ncolor-vl-g-b);
+      }
+      .vdark-color {
+        color: var(--ncolor-dg-b);
+      }
+      .flex {
+        display: flex;
+      }
+
+      /* styling the header  */
+      .header {
+        justify-content: space-between;
+      }
+      .notfi {
+        font-size: 20px;
+      }
+
+      .notfication-count {
+        padding: 3px 10px;
+        border-radius: 6px;
+        text-align: center;
+        margin-left: 5px;
+        font-size: 14px;
+        color: white;
+        background-color: hsl(228, 45%, 44%);
+      }
+
+      .h-right:hover {
+        color: var(--pcolor-blue);
+      }
+
+      /* ---notification container  */
+      .notfication-container {
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .notification {
+        border-radius: 20px;
+        font-size: 16px;
+        width: 100%;
+        position: relative;
+      }
+      .profile {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      .profile,
+      .comment-body {
+        padding: 15px 10px;
+      }
+      .profile img {
+        width: 50px;
+      }
+      .comment {
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+      .unread {
+        width: 10px;
+        height: 10px;
+        background-color: var(--pcolor-red);
+        border-radius: 50%;
+        margin-top: 5px;
+      }
+      .time {
+        color: var(--ncolor-g-v);
+        font-size: 15px;
+      }
+      .private-message {
+        /* background-color: var(--ncolor-l-g-b2); */
+        border: 2px solid var(--ncolor-l-g-b2);
+        padding: 20px;
+        color: var(--ncolor-g-v);
+        font-size: 16px;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      .post {
+        position: absolute;
+        right: 0;
+      }
+      .post img {
+        width: 50px;
+      }
